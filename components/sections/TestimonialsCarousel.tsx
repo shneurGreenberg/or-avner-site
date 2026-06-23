@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { testimonials } from "@/content/homepage";
@@ -39,7 +39,7 @@ export function TestimonialsCarousel() {
                 aria-label={`${item.alt}. Воспроизвести видео`}
               >
                 <div className="relative aspect-[9/16] max-h-[420px] w-full md:max-h-[480px]">
-                  <Image
+                  <SiteImage
                     src={item.image}
                     alt={item.alt}
                     fill

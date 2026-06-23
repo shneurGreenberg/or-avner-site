@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { reasons } from "@/content/homepage";
@@ -31,7 +31,7 @@ export function ReasonsCarousel() {
             <SwiperSlide key={reason.title}>
               <div className="grid items-center gap-8 overflow-hidden rounded-[32px] bg-brand-lavender/50 p-6 md:grid-cols-2 md:gap-10 md:p-10">
                 <div className="overflow-hidden rounded-3xl">
-                  <Image
+                  <SiteImage
                     src={reason.image}
                     alt={reason.title}
                     width={1280}

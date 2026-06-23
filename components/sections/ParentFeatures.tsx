@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { parentFeatures } from "@/content/homepage";
 import {
   SectionContainer,
@@ -24,7 +24,7 @@ export function ParentFeatures() {
             className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
           >
             <div className="overflow-hidden rounded-3xl">
-              <Image
+              <SiteImage
                 src={item.image}
                 alt={item.title}
                 width={1280}

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { admissionContent } from "@/content/homepage";
 import { ButtonLink } from "@/components/ui/Button";
 import { SectionContainer } from "@/components/ui/Section";
@@ -22,7 +22,7 @@ export function AdmissionBanner() {
 
           <div className="dashed-frame dashed-frame-white mx-auto max-w-md">
             <div className="overflow-hidden rounded-3xl">
-              <Image
+              <SiteImage
                 src={admissionContent.image}
                 alt="Ученики лицея"
                 width={1280}

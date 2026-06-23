@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { LogoIcon } from "@/components/ui/Icons";
 
@@ -43,7 +43,7 @@ export function Footer() {
 export function AerialDivider() {
   return (
     <div className="relative h-48 w-full overflow-hidden md:h-72 lg:h-96">
-      <Image
+      <SiteImage
         src="/images/aerial-campus.jpg"
         alt="Вид на кампус лицея «ОР АВНЕР»"
         fill

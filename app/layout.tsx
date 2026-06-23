@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
+import { assetPath } from "@/lib/assets";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     description: aboutDescription,
     locale: "ru_RU",
     type: "website",
-    images: ["/images/hero-staircase.jpg"],
+    images: [`${SITE.url}${assetPath("/images/hero-staircase.jpg")}`],
   },
 };
 

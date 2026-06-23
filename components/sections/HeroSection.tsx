@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { SITE } from "@/lib/constants";
 import { HeroArcs } from "@/components/ui/Icons";
 
@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="relative min-h-[520px] md:min-h-[620px] lg:min-h-[700px]">
-        <Image
+        <SiteImage
           src="/images/hero-staircase.jpg"
           alt="Ученики лицея «ОР АВНЕР»"
           fill
@@ -20,7 +20,7 @@ export function HeroSection() {
 
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 pb-16 pt-8 md:flex-row md:items-end md:justify-between md:px-8 md:pb-20 md:pt-12">
           <div className="relative w-full max-w-xs shrink-0 md:max-w-sm lg:max-w-md">
-            <Image
+            <SiteImage
               src="/images/hero-boy-logo.jpg"
               alt="Ученик с логотипом «ОР АВНЕР»"
               width={708}

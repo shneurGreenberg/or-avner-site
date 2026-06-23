@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { aboutContent } from "@/content/homepage";
 import { ButtonLink } from "@/components/ui/Button";
 import {
@@ -24,7 +24,7 @@ export function AboutSection() {
 
         <div className="dashed-frame mx-auto max-w-lg">
           <div className="overflow-hidden rounded-3xl">
-            <Image
+            <SiteImage
               src="/images/building-front.jpg"
               alt="Здание лицея «ОР АВНЕР»"
               width={1080}

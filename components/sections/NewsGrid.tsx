@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { SiteImage } from "@/components/ui/SiteImage";
 import { newsItems } from "@/content/homepage";
 import { ButtonLink } from "@/components/ui/Button";
 import { SectionContainer, SectionTitle } from "@/components/ui/Section";
@@ -17,7 +17,7 @@ export function NewsGrid() {
             className="group overflow-hidden rounded-3xl"
           >
             <div className="overflow-hidden rounded-3xl">
-              <Image
+              <SiteImage
                 src={item.image}
                 alt={item.title}
                 width={1280}
