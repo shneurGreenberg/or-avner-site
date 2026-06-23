@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+:root {
+  --background: #ffffff;
+  --foreground: #2e3192;
+  --brand-navy: #2e3192;
+  --brand-lavender: #e8e9f5;
+  --brand-lavender-text: #a3a4d5;
+  --brand-orange: #f5a623;
+  --brand-yellow: #fdf081;
+  --brand-sky: #7ec8e3;
+  --text-body: #4a4a68;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-lavender: var(--brand-lavender);
+  --color-brand-lavender-text: var(--brand-lavender-text);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-sky: var(--brand-sky);
+  --color-text-body: var(--text-body);
+  --font-sans: var(--font-montserrat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-body);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+}
+
+.dashed-frame {
+  position: relative;
+}
+
+.dashed-frame::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border: 2px dashed var(--brand-sky);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+.dashed-frame-white::before {
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: var(--brand-lavender-text) !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--brand-navy) !important;
+}
+
+.reasons-swiper .swiper-button-prev,
+.reasons-swiper .swiper-button-next {
+  color: var(--brand-sky);
+  width: 44px;
+  height: 44px;
+}
+
+.reasons-swiper .swiper-button-prev::after,
+.reasons-swiper .swiper-button-next::after {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.testimonials-swiper .swiper-slide {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.testimonials-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.55;
+  transform: scale(0.88);
+}
+
+.testimonials-swiper .swiper-slide-active {
+  transform: scale(1);
+}
