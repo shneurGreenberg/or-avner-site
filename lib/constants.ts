@@ -6,7 +6,7 @@ export const SITE = {
   phoneHref: "tel:+73832091208",
   email: "anver@edu54.ru",
   address: "г. Новосибирск, просп. Дзержинского, 1",
-  url: "https://or-avner.ru",
+  url: "https://shneurgreenberg.github.io/or-avner-site",
 } as const;
 
 export const NAV_LINKS = [
