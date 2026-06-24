@@ -13,7 +13,7 @@ export function FaqAccordion() {
     <SectionContainer id="faq">
       <div className="mb-8 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
         <SectionTitle>Часто задаваемые вопросы</SectionTitle>
-        <FaqDoodle className="h-24 w-24 shrink-0 md:h-28 md:w-28" />
+        <FaqDoodle className="h-20 w-auto shrink-0 md:h-28" />
       </div>
 
       <div className="divide-y divide-brand-sky/40">

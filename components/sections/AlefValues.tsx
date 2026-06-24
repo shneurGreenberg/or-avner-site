@@ -35,10 +35,10 @@ export function AlefValues() {
         {alefContent.stats.map((stat) => (
           <div
             key={stat.letter}
-            className="flex items-start gap-5 border-b border-brand-lavender pb-8 last:border-0"
+            className="flex items-start gap-5 border-b border-brand-lavender pb-8 last:border-0 md:gap-8"
           >
             <LetterIcon letter={stat.letter} />
-            <p className="pt-3 text-base leading-relaxed text-brand-navy md:text-lg">
+            <p className="pt-2 text-base font-medium leading-relaxed text-brand-navy md:pt-3 md:text-lg">
               {stat.text}
             </p>
           </div>

@@ -1,14 +1,13 @@
 import { SiteImage } from "@/components/ui/SiteImage";
 import { NAV_LINKS, SITE } from "@/lib/constants";
-import { LogoIcon } from "@/components/ui/Icons";
+import { FooterLogo } from "@/components/ui/Icons";
 
 export function Footer() {
   return (
     <footer className="bg-brand-navy text-white">
-      <div className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
-        <div className="mb-10 flex items-center gap-3">
-          <LogoIcon className="h-10 w-10" />
-          <span className="text-xl font-bold">ОР АВНЕР</span>
+      <div className="mx-auto max-w-[1200px] px-4 py-12 md:px-8 md:py-16">
+        <div className="mb-10">
+          <FooterLogo />
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -18,7 +17,7 @@ export function Footer() {
                 <a
                   key={`${col}-${link.href}`}
                   href={link.href}
-                  className="text-sm text-white/80 transition-colors hover:text-white"
+                  className="text-sm text-white/85 transition-colors hover:text-white"
                 >
                   {link.label}
                 </a>
@@ -37,19 +36,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-export function AerialDivider() {
-  return (
-    <div className="relative h-48 w-full overflow-hidden md:h-72 lg:h-96">
-      <SiteImage
-        src="/images/aerial-campus.jpg"
-        alt="Вид на кампус лицея «ОР АВНЕР»"
-        fill
-        className="object-cover"
-        sizes="100vw"
-      />
-    </div>
   );
 }

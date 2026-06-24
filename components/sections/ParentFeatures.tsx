@@ -33,7 +33,7 @@ export function ParentFeatures() {
               />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-brand-navy md:text-2xl">
+              <h3 className="font-display text-xl font-extrabold text-brand-navy md:text-2xl">
                 {item.title}
               </h3>
               <p className="mt-3 text-base leading-relaxed text-text-body">

@@ -5,27 +5,34 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #2e3192;
-  --brand-navy: #2e3192;
-  --brand-lavender: #e8e9f5;
-  --brand-lavender-text: #a3a4d5;
-  --brand-orange: #f5a623;
-  --brand-yellow: #fdf081;
-  --brand-sky: #7ec8e3;
-  --text-body: #4a4a68;
+  --foreground: #2e298e;
+  --brand-navy: #2e298e;
+  --brand-navy-dark: #252070;
+  --brand-lavender: #eef2ff;
+  --brand-lavender-card: #f0f4ff;
+  --brand-lavender-text: #7c7fd4;
+  --brand-lavender-muted: #a3a4d5;
+  --brand-orange: #ffcb05;
+  --brand-yellow: #ffc131;
+  --brand-sky: #9dd4eb;
+  --text-body: #4a4868;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-brand-navy: var(--brand-navy);
+  --color-brand-navy-dark: var(--brand-navy-dark);
   --color-brand-lavender: var(--brand-lavender);
+  --color-brand-lavender-card: var(--brand-lavender-card);
   --color-brand-lavender-text: var(--brand-lavender-text);
+  --color-brand-lavender-muted: var(--brand-lavender-muted);
   --color-brand-orange: var(--brand-orange);
   --color-brand-yellow: var(--brand-yellow);
   --color-brand-sky: var(--brand-sky);
   --color-text-body: var(--text-body);
   --font-sans: var(--font-montserrat);
+  --font-display: var(--font-nunito);
 }
 
 html {
@@ -38,6 +45,10 @@ body {
   font-family: var(--font-montserrat), system-ui, sans-serif;
 }
 
+.font-display {
+  font-family: var(--font-nunito), var(--font-montserrat), system-ui, sans-serif;
+}
+
 .dashed-frame {
   position: relative;
 }
@@ -45,20 +56,27 @@ body {
 .dashed-frame::before {
   content: "";
   position: absolute;
-  inset: -12px;
+  inset: -14px;
   border: 2px dashed var(--brand-sky);
-  border-radius: 28px;
+  border-radius: 32px;
   pointer-events: none;
 }
 
 .dashed-frame-white::before {
-  border-color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-curve {
+  position: absolute;
+  pointer-events: none;
+  border: 2px dashed rgba(255, 255, 255, 0.85);
+  border-radius: 9999px;
 }
 
 .swiper-pagination-bullet {
   width: 10px !important;
   height: 10px !important;
-  background: var(--brand-lavender-text) !important;
+  background: var(--brand-lavender-muted) !important;
   opacity: 1 !important;
 }
 
@@ -69,25 +87,35 @@ body {
 .reasons-swiper .swiper-button-prev,
 .reasons-swiper .swiper-button-next {
   color: var(--brand-sky);
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
 }
 
 .reasons-swiper .swiper-button-prev::after,
 .reasons-swiper .swiper-button-next::after {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
 }
 
 .testimonials-swiper .swiper-slide {
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
 .testimonials-swiper .swiper-slide:not(.swiper-slide-active) {
-  opacity: 0.55;
-  transform: scale(0.88);
+  opacity: 0.45;
+  transform: scale(0.86);
 }
 
 .testimonials-swiper .swiper-slide-active {
   transform: scale(1);
+  opacity: 1;
+}
+
+.letter-badge {
+  color: var(--brand-navy);
+  text-shadow:
+    2px 2px 0 var(--brand-yellow),
+    -1px -1px 0 var(--brand-yellow),
+    1px -1px 0 var(--brand-yellow),
+    -1px 1px 0 var(--brand-yellow);
 }

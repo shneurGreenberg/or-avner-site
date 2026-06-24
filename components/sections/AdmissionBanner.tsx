@@ -9,10 +9,10 @@ export function AdmissionBanner() {
       <div className="overflow-hidden rounded-[32px] bg-brand-lavender">
         <div className="grid items-center gap-8 p-8 md:grid-cols-2 md:gap-12 md:p-12 lg:p-16">
           <div>
-            <h2 className="text-3xl font-bold text-brand-navy md:text-4xl">
+            <h2 className="font-display text-3xl font-extrabold text-brand-navy md:text-4xl">
               {admissionContent.title}
             </h2>
-            <p className="mt-3 text-lg italic text-brand-lavender-text md:text-xl">
+            <p className="mt-3 text-lg font-medium italic text-brand-lavender-text md:text-xl">
               {admissionContent.subtitle}
             </p>
             <div className="mt-8">

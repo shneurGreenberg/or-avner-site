@@ -1,123 +1,116 @@
-export function LogoIcon({ className }: { className?: string }) {
+import { SiteImage } from "@/components/ui/SiteImage";
+import { IMAGES } from "@/lib/constants";
+
+export function Logo({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      <path
-        d="M24 4C26.5 14 34 21.5 44 24C34 26.5 26.5 34 24 44C21.5 34 14 26.5 4 24C14 21.5 21.5 14 24 4Z"
-        fill="#F5A623"
-        stroke="white"
-        strokeWidth="1.5"
+    <a href="#" className={className}>
+      <SiteImage
+        src={IMAGES.logo}
+        alt="ОР АВНЕР — Новосибирский еврейский лицей"
+        width={776}
+        height={274}
+        priority
+        className="h-12 w-auto md:h-14"
       />
-      <circle cx="24" cy="24" r="4" fill="white" />
-    </svg>
+    </a>
   );
 }
 
-export function Logo({ compact = false }: { compact?: boolean }) {
+export function FooterLogo({ className }: { className?: string }) {
   return (
-    <a href="#" className="flex items-center gap-3">
-      <LogoIcon className="h-10 w-10 shrink-0 md:h-12 md:w-12" />
-      <div className="leading-tight">
-        <div className="text-lg font-bold text-brand-navy md:text-xl">
-          ОР АВНЕР
-        </div>
-        {!compact && (
-          <div className="hidden text-[10px] font-medium uppercase tracking-wide text-brand-lavender-text sm:block md:text-xs">
-            Новосибирский еврейский лицей
-          </div>
-        )}
-      </div>
-    </a>
+    <SiteImage
+      src={IMAGES.logoFooter}
+      alt="ОР АВНЕР"
+      width={667}
+      height={235}
+      className={className ?? "h-10 w-auto md:h-12"}
+    />
   );
 }
 
 export function FaqDoodle({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 120 120"
-      className={className}
-      aria-hidden="true"
-      fill="none"
-    >
-      <circle cx="60" cy="55" r="28" fill="#FFF8E7" stroke="#F5A623" strokeWidth="3" />
-      <text x="60" y="65" textAnchor="middle" fontSize="32" fill="#F5A623" fontWeight="700">
-        ?
-      </text>
-      <path d="M15 80 Q25 60 35 75" stroke="#A3A4D5" strokeWidth="2" fill="none" />
-      <path d="M85 30 Q95 20 105 35" stroke="#7EC8E3" strokeWidth="2" strokeDasharray="4 4" fill="none" />
-      <path d="M90 85 L98 93 M98 85 L90 93" stroke="#F5A623" strokeWidth="2" />
-    </svg>
+    <SiteImage
+      src={IMAGES.decorFaq}
+      alt=""
+      width={741}
+      height={349}
+      aria-hidden
+      className={className ?? "h-24 w-auto md:h-32"}
+    />
   );
 }
 
 export function MapPinDoodle({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 80 80" className={className} aria-hidden="true" fill="none">
-      <path
-        d="M40 8C28 8 20 18 20 28C20 42 40 60 40 60C40 60 60 42 60 28C60 18 52 8 40 8Z"
-        fill="#FDF081"
-        stroke="#F5A623"
-        strokeWidth="2"
-      />
-      <circle cx="40" cy="28" r="8" fill="white" stroke="#F5A623" strokeWidth="2" />
-      <path d="M10 65 Q20 55 30 62" stroke="#FDF081" strokeWidth="3" fill="none" />
-    </svg>
+    <SiteImage
+      src={IMAGES.decorMapPin}
+      alt=""
+      width={776}
+      height={274}
+      aria-hidden
+      className={className ?? "h-16 w-auto md:h-20"}
+    />
   );
 }
 
 export function LetterIcon({ letter }: { letter: string }) {
   return (
-    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border-[3px] border-brand-yellow bg-white text-3xl font-bold text-brand-navy shadow-sm md:h-20 md:w-20 md:text-4xl">
+    <div className="font-display letter-badge flex h-[72px] w-[72px] shrink-0 items-center justify-center text-5xl font-extrabold md:h-20 md:w-20 md:text-6xl">
       {letter}
     </div>
   );
 }
 
-export function HeroArcs() {
+export function HeroCurves() {
   return (
-    <svg
-      className="pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-40"
-      viewBox="0 0 400 400"
-      aria-hidden="true"
-    >
-      <path
-        d="M350 50 Q250 150 350 250"
-        stroke="#7EC8E3"
-        strokeWidth="2"
-        strokeDasharray="8 8"
-        fill="none"
-      />
-      <path
-        d="M380 80 Q280 180 380 280"
-        stroke="#7EC8E3"
-        strokeWidth="2"
-        strokeDasharray="8 8"
-        fill="none"
-      />
-    </svg>
+    <>
+      <div className="hero-curve left-[8%] top-[18%] h-40 w-40 opacity-70 md:h-56 md:w-56" />
+      <div className="hero-curve left-[14%] top-[28%] h-52 w-52 opacity-50 md:h-72 md:w-72" />
+      <div className="hero-curve right-[12%] top-[22%] hidden h-48 w-48 opacity-40 md:block" />
+    </>
   );
 }
 
 export function AlephIllustration() {
   return (
-    <div className="relative mx-auto max-w-sm">
-      <div className="flex items-end justify-center gap-2">
-        <div className="flex h-24 w-16 items-end justify-center rounded-t-lg bg-brand-lavender pb-2 text-2xl font-bold text-brand-navy">
+    <div className="relative mx-auto max-w-xs md:max-w-sm">
+      <div className="flex items-end justify-center gap-3">
+        <div className="flex h-24 w-14 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-lavender pb-2 font-display text-2xl font-extrabold text-brand-navy md:h-28 md:w-16 md:text-3xl">
           2
         </div>
-        <div className="flex h-32 w-20 items-end justify-center rounded-t-lg bg-brand-navy pb-2 text-3xl font-bold text-white">
+        <div className="relative flex h-32 w-20 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-navy pb-2 font-display text-3xl font-extrabold text-white md:h-36 md:w-24 md:text-4xl">
           1
+          <SiteImage
+            src={IMAGES.logo}
+            alt=""
+            width={120}
+            height={120}
+            aria-hidden
+            className="absolute -top-14 left-1/2 h-16 w-16 -translate-x-1/2 object-contain md:-top-16 md:h-20 md:w-20"
+          />
         </div>
-        <div className="flex h-20 w-14 items-end justify-center rounded-t-lg bg-brand-lavender pb-2 text-xl font-bold text-brand-navy">
+        <div className="flex h-20 w-12 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-lavender pb-2 font-display text-xl font-extrabold text-brand-navy md:h-24 md:w-14 md:text-2xl">
           3
         </div>
       </div>
-      <LogoIcon className="absolute -top-8 left-1/2 h-20 w-20 -translate-x-1/2" />
     </div>
+  );
+}
+
+export function GlassesIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className ?? "h-6 w-6 text-brand-navy"}
+      aria-hidden="true"
+    >
+      <circle cx="7" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+      <circle cx="17" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M11 12h2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M3 12h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M21 12h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
   );
 }

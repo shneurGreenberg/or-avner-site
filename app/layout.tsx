@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { Montserrat, Nunito } from "next/font/google";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
 import { assetPath } from "@/lib/assets";
@@ -8,6 +8,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600", "700"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin", "cyrillic"],
+  weight: ["600", "700", "800"],
 });
 
 const aboutDescription =
@@ -22,7 +28,7 @@ export const metadata: Metadata = {
     description: aboutDescription,
     locale: "ru_RU",
     type: "website",
-    images: [`${SITE.url}${assetPath("/images/hero-staircase.jpg")}`],
+    images: [`${SITE.url}${assetPath("/images/hero-staircase.png")}`],
   },
 };
 
@@ -35,7 +41,8 @@ const jsonLd = {
   email: SITE.email,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "просп. Дзержинского, 1",
+    streetAddress: "улица Шекспира, 9а",
+    postalCode: "630015",
     addressLocality: "Новосибирск",
     addressCountry: "RU",
   },
@@ -47,7 +54,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${montserrat.variable} h-full antialiased`}>
+    <html
+      lang="ru"
+      className={`${montserrat.variable} ${nunito.variable} h-full antialiased`}
+    >
       <head>
         <script
           type="application/ld+json"

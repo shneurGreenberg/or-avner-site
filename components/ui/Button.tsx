@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "primary" | "outline";
-  asChild?: boolean;
 };
 
 export function Button({
@@ -14,9 +13,9 @@ export function Button({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-wide transition-colors",
+        "inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors",
         variant === "primary" &&
-          "bg-brand-navy text-white hover:bg-[#252878] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy",
+          "bg-brand-navy text-white hover:bg-brand-navy-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-navy",
         variant === "outline" &&
           "border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white",
         className,
@@ -43,9 +42,9 @@ export function ButtonLink({
     <a
       href={href}
       className={cn(
-        "inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold uppercase tracking-wide transition-colors",
+        "inline-flex items-center justify-center rounded-full px-8 py-3.5 text-sm font-bold uppercase tracking-wide transition-colors",
         variant === "primary" &&
-          "bg-brand-navy text-white hover:bg-[#252878]",
+          "bg-brand-navy text-white hover:bg-brand-navy-dark",
         variant === "outline" &&
           "border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white",
         className,

@@ -26,7 +26,9 @@ export function NewsGrid() {
               />
             </div>
             <div className="pt-5">
-              <h3 className="text-lg font-bold text-brand-navy">{item.title}</h3>
+              <h3 className="font-display text-lg font-extrabold text-brand-navy">
+                {item.title}
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-text-body">
                 {item.excerpt}
               </p>

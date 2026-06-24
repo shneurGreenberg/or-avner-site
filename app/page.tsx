@@ -1,5 +1,5 @@
 import { Header } from "@/components/layout/Header";
-import { AerialDivider, Footer } from "@/components/layout/Footer";
+import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ReasonsCarousel } from "@/components/sections/ReasonsCarousel";
@@ -26,7 +26,6 @@ export default function Home() {
         <FaqAccordion />
         <NewsGrid />
         <ContactSection />
-        <AerialDivider />
       </main>
       <Footer />
     </>

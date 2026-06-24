@@ -10,8 +10,8 @@ export function SectionContainer({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={cn("px-4 py-16 md:px-8 md:py-24", className)}>
-      <div className="mx-auto w-full max-w-6xl">{children}</div>
+    <section id={id} className={cn("px-4 py-14 md:px-8 md:py-20 lg:py-24", className)}>
+      <div className="mx-auto w-full max-w-[1200px]">{children}</div>
     </section>
   );
 }
@@ -26,7 +26,7 @@ export function SectionTitle({
   return (
     <h2
       className={cn(
-        "text-3xl font-bold text-brand-navy md:text-4xl lg:text-[42px]",
+        "font-display text-[2rem] font-extrabold leading-tight text-brand-navy md:text-[2.5rem] lg:text-[42px]",
         className,
       )}
     >
@@ -45,7 +45,7 @@ export function SectionSubtitle({
   return (
     <p
       className={cn(
-        "mt-2 text-lg italic text-brand-lavender-text md:text-xl",
+        "mt-2 text-lg font-medium italic text-brand-lavender-text md:text-xl",
         className,
       )}
     >
@@ -56,12 +56,12 @@ export function SectionSubtitle({
 
 export function DashedDivider() {
   return (
-    <div className="my-10 flex justify-center">
-      <div className="flex gap-1">
-        {Array.from({ length: 12 }).map((_, i) => (
+    <div className="my-8 flex justify-center md:my-10">
+      <div className="flex gap-1.5">
+        {Array.from({ length: 14 }).map((_, i) => (
           <span
             key={i}
-            className="h-1 w-3 rounded-full bg-brand-sky/60"
+            className="h-1.5 w-1.5 rounded-sm bg-brand-lavender-muted/70"
           />
         ))}
       </div>
