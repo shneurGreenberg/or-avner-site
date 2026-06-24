@@ -27,10 +27,15 @@ export const MAP = {
 } as const;
 
 export const IMAGES = {
-  logo: "/images/logo.png",
-  logoFooter: "/images/logo-footer.png",
-  heroStaircase: "/images/hero-staircase.png",
-  heroBoy: "/images/hero-boy-logo.png",
-  decorFaq: "/images/decor-faq.png",
-  decorMapPin: "/images/decor-map-pin.png",
+  logo: "/images/logo.webp",
+  logoFooter: "/images/logo-footer.webp",
+  heroStaircase: "/images/hero-staircase.webp",
+  heroBoy: "/images/hero-boy.webp",
+  decorFaq: "/images/decor-faq.webp",
+  decorMapPin: "/images/decor-map-pin.webp",
+  alephPodium: "/images/aleph-podium.webp",
+  letterA: "/images/letter-a.webp",
+  letterL: "/images/letter-l.webp",
+  letterE: "/images/letter-e.webp",
+  letterF: "/images/letter-f.webp",
 } as const;

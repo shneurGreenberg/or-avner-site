@@ -55,7 +55,7 @@ export function ContactSection() {
     <section id="contacts" className="relative overflow-hidden">
       <div className="absolute inset-0">
         <SiteImage
-          src="/images/aerial-campus.jpg"
+          src="/images/aerial-campus.webp"
           alt=""
           fill
           aria-hidden

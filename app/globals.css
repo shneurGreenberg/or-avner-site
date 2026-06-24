@@ -56,21 +56,34 @@ body {
 .dashed-frame::before {
   content: "";
   position: absolute;
-  inset: -14px;
+  inset: -12px;
   border: 2px dashed var(--brand-sky);
-  border-radius: 32px;
+  border-radius: 28px;
   pointer-events: none;
 }
 
 .dashed-frame-white::before {
-  border-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-curve {
   position: absolute;
   pointer-events: none;
-  border: 2px dashed rgba(255, 255, 255, 0.85);
+  border: 2px dashed rgba(157, 212, 235, 0.95);
   border-radius: 9999px;
+}
+
+.title-divider {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+.title-divider span {
+  display: block;
+  height: 7px;
+  width: 7px;
+  background: var(--brand-lavender-muted);
 }
 
 .swiper-pagination-bullet {

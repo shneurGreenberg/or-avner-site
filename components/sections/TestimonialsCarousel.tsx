@@ -46,7 +46,7 @@ export function TestimonialsCarousel() {
                     className="object-cover"
                     sizes="(max-width:768px) 80vw, 320px"
                   />
-                  <div className="absolute inset-0 bg-brand-navy/20 transition-colors group-hover:bg-brand-navy/30" />
+                  <div className="absolute inset-0 bg-brand-sky/20 transition-colors group-hover:bg-brand-sky/30" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110">
                       <svg

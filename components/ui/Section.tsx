@@ -56,15 +56,10 @@ export function SectionSubtitle({
 
 export function DashedDivider() {
   return (
-    <div className="my-8 flex justify-center md:my-10">
-      <div className="flex gap-1.5">
-        {Array.from({ length: 14 }).map((_, i) => (
-          <span
-            key={i}
-            className="h-1.5 w-1.5 rounded-sm bg-brand-lavender-muted/70"
-          />
-        ))}
-      </div>
+    <div className="title-divider my-8 md:my-10">
+      {Array.from({ length: 16 }).map((_, i) => (
+        <span key={i} />
+      ))}
     </div>
   );
 }

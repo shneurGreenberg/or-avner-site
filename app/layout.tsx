@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description: aboutDescription,
     locale: "ru_RU",
     type: "website",
-    images: [`${SITE.url}${assetPath("/images/hero-staircase.png")}`],
+    images: [`${SITE.url}${assetPath("/images/hero-staircase.webp")}`],
   },
 };
 

@@ -9,42 +9,42 @@ export const reasons = [
   {
     title: "У нас учёба – не обязанность, а удовольствие",
     text: "Мы создаём атмосферу, в которой каждый ребёнок с радостью приходит в школу. Современные методики, увлекательные проекты и внимательные педагоги превращают обучение в увлекательное путешествие.",
-    image: "/images/students-desk.jpg",
+    image: "/images/students-desk.webp",
   },
   {
     title: "Индивидуальный подход к каждому ученику",
     text: "Наши педагоги знают сильные стороны каждого ребёнка и помогают раскрыть его потенциал. Небольшие классы позволяют уделять внимание каждому ученику.",
-    image: "/images/students-desk-2.jpg",
+    image: "/images/students-desk-2.webp",
   },
   {
     title: "Современные технологии в обучении",
     text: "Интерактивные доски, цифровые ресурсы и проектная работа — мы используем всё лучшее из современного образования, сохраняя проверенные традиции.",
-    image: "/images/students-classroom.jpg",
+    image: "/images/students-classroom.webp",
   },
   {
     title: "Еврейские традиции и ценности",
     text: "Изучение иудаизма, празднование еврейских праздников и формирование культурной идентичности — неотъемлемая часть нашей образовательной программы.",
-    image: "/images/group-event.jpg",
+    image: "/images/group-event.webp",
   },
   {
     title: "100% поступление в вузы",
     text: "Абсолютный рекорд — все наши выпускники поступают в ведущие вузы города, страны и мира. Мы готовим к успешному будущему.",
-    image: "/images/admission-students.jpg",
+    image: "/images/admission-students.webp",
   },
   {
     title: "25 лет опыта в образовании",
     text: "Более четверти века мы создаём среду, где дети растут умными, добрыми и успешными. Наш опыт — ваша уверенность.",
-    image: "/images/building-front.jpg",
+    image: "/images/building-front.webp",
   },
   {
     title: "Богатая внеурочная жизнь",
     text: "Кружки, секции, конкурсы и праздники — у наших учеников всегда есть возможность развиваться и проявлять таланты.",
-    image: "/images/student-project.jpg",
+    image: "/images/student-project.webp",
   },
   {
     title: "Современная инфраструктура",
     text: "Новое здание с яркой архитектурой, просторные классы, спортивный зал, бассейн и безопасная территория для детей.",
-    image: "/images/aerial-campus.jpg",
+    image: "/images/aerial-campus.webp",
   },
 ];
 
@@ -52,7 +52,7 @@ export const admissionContent = {
   title: "Поступление в школу",
   subtitle: "Приглашаем на 2025–2026 учебный год",
   cta: "ИНФОРМАЦИЯ О НАБОРЕ",
-  image: "/images/admission-students.jpg",
+  image: "/images/admission-students.webp",
 };
 
 export const parentFeatures = {
@@ -64,27 +64,27 @@ export const parentFeatures = {
     {
       title: "Домашняя работа без участия родителей",
       text: "Наши педагоги помогают детям выполнять домашние задания в школе. Родителям не нужно тратить вечера на уроки — время семьи остаётся для семьи.",
-      image: "/images/group-event.jpg",
+      image: "/images/group-event.webp",
     },
     {
       title: "Регулярные отчёты",
       text: "Возможность наблюдать за динамикой обучения ребёнка. Отправляем отчёт в электронном виде регулярно по расписанию.",
-      image: "/images/teacher-office.jpg",
+      image: "/images/teacher-office.webp",
     },
     {
       title: "Мы всегда на связи",
       text: "Напомнить о собрании, решить любые проблемы — мы всегда на связи по любым вопросам.",
-      image: "/images/teacher-office.jpg",
+      image: "/images/teacher-office.webp",
     },
     {
       title: "Адаптируем расписание",
       text: "Найдём удобный вариант расписания, если ребёнку необходимо посещать дополнительные занятия.",
-      image: "/images/student-project.jpg",
+      image: "/images/student-project.webp",
     },
     {
       title: "Добираться легко и удобно",
       text: "Лёгкая транспортная доступность и удобные маршруты к «ОР АВНЕР».",
-      image: "/images/aerial-campus.jpg",
+      image: "/images/aerial-campus.webp",
     },
   ],
 };
@@ -119,14 +119,14 @@ export const alefContent = {
 };
 
 export const testimonials = [
-  { image: "/images/testimonial-1.jpg", alt: "Отзыв родителя 1" },
-  { image: "/images/testimonial-2.jpg", alt: "Отзыв родителя 2" },
-  { image: "/images/testimonial-3.jpg", alt: "Отзыв родителя 3" },
-  { image: "/images/testimonial-1.jpg", alt: "Отзыв родителя 4" },
-  { image: "/images/testimonial-2.jpg", alt: "Отзыв родителя 5" },
-  { image: "/images/testimonial-3.jpg", alt: "Отзыв родителя 6" },
-  { image: "/images/testimonial-1.jpg", alt: "Отзыв родителя 7" },
-  { image: "/images/testimonial-2.jpg", alt: "Отзыв родителя 8" },
+  { image: "/images/testimonial-1.webp", alt: "Отзыв родителя 1" },
+  { image: "/images/testimonial-2.webp", alt: "Отзыв родителя 2" },
+  { image: "/images/testimonial-3.webp", alt: "Отзыв родителя 3" },
+  { image: "/images/testimonial-1.webp", alt: "Отзыв родителя 4" },
+  { image: "/images/testimonial-2.webp", alt: "Отзыв родителя 5" },
+  { image: "/images/testimonial-3.webp", alt: "Отзыв родителя 6" },
+  { image: "/images/testimonial-1.webp", alt: "Отзыв родителя 7" },
+  { image: "/images/testimonial-2.webp", alt: "Отзыв родителя 8" },
 ];
 
 export const faqItems = [
@@ -163,18 +163,18 @@ export const newsItems = [
     title: "Фундамент для будущих достижений",
     excerpt:
       "Выбирая нас, вы выбираете для своего ребёнка возможность быть первым не только в алфавите, но и в жизни.",
-    image: "/images/group-event.jpg",
+    image: "/images/group-event.webp",
   },
   {
     title: "Фундамент для будущих достижений",
     excerpt:
       "Выбирая нас, вы выбираете для своего ребёнка возможность быть первым не только в алфавите, но и в жизни.",
-    image: "/images/building-balloons.jpg",
+    image: "/images/building-balloons.webp",
   },
   {
     title: "Фундамент для будущих достижений",
     excerpt:
       "Выбирая нас, вы выбираете для своего ребёнка возможность быть первым не только в алфавите, но и в жизни.",
-    image: "/images/building-logo.jpg",
+    image: "/images/building-logo.webp",
   },
 ];

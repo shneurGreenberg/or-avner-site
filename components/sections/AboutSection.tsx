@@ -25,7 +25,7 @@ export function AboutSection() {
         <div className="dashed-frame mx-auto max-w-lg">
           <div className="overflow-hidden rounded-3xl">
             <SiteImage
-              src="/images/building-front.jpg"
+              src="/images/building-front.webp"
               alt="Здание лицея «ОР АВНЕР»"
               width={1080}
               height={530}

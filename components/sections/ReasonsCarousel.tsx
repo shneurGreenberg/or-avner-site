@@ -30,7 +30,7 @@ export function ReasonsCarousel() {
           {reasons.map((reason) => (
             <SwiperSlide key={reason.title}>
               <div className="grid items-center gap-8 overflow-hidden rounded-[32px] bg-brand-lavender p-6 md:grid-cols-2 md:gap-10 md:p-10 lg:p-12">
-                <div className="overflow-hidden rounded-[28px]">
+                <div className="dashed-frame overflow-hidden rounded-[28px]">
                   <SiteImage
                     src={reason.image}
                     alt={reason.title}

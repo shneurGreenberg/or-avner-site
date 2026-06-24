@@ -23,7 +23,7 @@ export function ParentFeatures() {
             key={item.title}
             className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
           >
-            <div className="overflow-hidden rounded-3xl">
+            <div className="dashed-frame overflow-hidden rounded-3xl">
               <SiteImage
                 src={item.image}
                 alt={item.title}

@@ -7,10 +7,10 @@ export function Logo({ className }: { className?: string }) {
       <SiteImage
         src={IMAGES.logo}
         alt="ОР АВНЕР — Новосибирский еврейский лицей"
-        width={776}
-        height={274}
+        width={300}
+        height={110}
         priority
-        className="h-12 w-auto md:h-14"
+        className="h-10 w-auto md:h-12"
       />
     </a>
   );
@@ -33,10 +33,10 @@ export function FaqDoodle({ className }: { className?: string }) {
     <SiteImage
       src={IMAGES.decorFaq}
       alt=""
-      width={741}
-      height={349}
+      width={900}
+      height={423}
       aria-hidden
-      className={className ?? "h-24 w-auto md:h-32"}
+      className={className ?? "h-20 w-auto md:h-28"}
     />
   );
 }
@@ -46,54 +46,58 @@ export function MapPinDoodle({ className }: { className?: string }) {
     <SiteImage
       src={IMAGES.decorMapPin}
       alt=""
-      width={776}
-      height={274}
+      width={500}
+      height={177}
       aria-hidden
-      className={className ?? "h-16 w-auto md:h-20"}
+      className={className ?? "h-14 w-auto md:h-16"}
     />
   );
 }
 
+const LETTER_IMAGES: Record<string, string> = {
+  А: IMAGES.letterA,
+  Л: IMAGES.letterL,
+  Е: IMAGES.letterE,
+  Ф: IMAGES.letterF,
+};
+
 export function LetterIcon({ letter }: { letter: string }) {
+  const src = LETTER_IMAGES[letter];
+  if (!src) {
+    return null;
+  }
+
   return (
-    <div className="font-display letter-badge flex h-[72px] w-[72px] shrink-0 items-center justify-center text-5xl font-extrabold md:h-20 md:w-20 md:text-6xl">
-      {letter}
-    </div>
+    <SiteImage
+      src={src}
+      alt={letter}
+      width={220}
+      height={220}
+      className="h-[72px] w-[72px] shrink-0 object-contain md:h-20 md:w-20"
+    />
   );
 }
 
 export function HeroCurves() {
   return (
     <>
-      <div className="hero-curve left-[8%] top-[18%] h-40 w-40 opacity-70 md:h-56 md:w-56" />
-      <div className="hero-curve left-[14%] top-[28%] h-52 w-52 opacity-50 md:h-72 md:w-72" />
-      <div className="hero-curve right-[12%] top-[22%] hidden h-48 w-48 opacity-40 md:block" />
+      <div className="hero-curve left-[6%] top-[20%] h-36 w-36 opacity-80 md:h-48 md:w-48" />
+      <div className="hero-curve left-[12%] top-[30%] h-44 w-44 opacity-55 md:h-60 md:w-60" />
+      <div className="hero-curve right-[10%] top-[24%] hidden h-40 w-40 opacity-45 md:block lg:h-52 lg:w-52" />
     </>
   );
 }
 
 export function AlephIllustration() {
   return (
-    <div className="relative mx-auto max-w-xs md:max-w-sm">
-      <div className="flex items-end justify-center gap-3">
-        <div className="flex h-24 w-14 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-lavender pb-2 font-display text-2xl font-extrabold text-brand-navy md:h-28 md:w-16 md:text-3xl">
-          2
-        </div>
-        <div className="relative flex h-32 w-20 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-navy pb-2 font-display text-3xl font-extrabold text-white md:h-36 md:w-24 md:text-4xl">
-          1
-          <SiteImage
-            src={IMAGES.logo}
-            alt=""
-            width={120}
-            height={120}
-            aria-hidden
-            className="absolute -top-14 left-1/2 h-16 w-16 -translate-x-1/2 object-contain md:-top-16 md:h-20 md:w-20"
-          />
-        </div>
-        <div className="flex h-20 w-12 items-end justify-center rounded-t-2xl border-2 border-brand-navy bg-brand-lavender pb-2 font-display text-xl font-extrabold text-brand-navy md:h-24 md:w-14 md:text-2xl">
-          3
-        </div>
-      </div>
+    <div className="relative mx-auto w-full max-w-[320px] md:max-w-[380px]">
+      <SiteImage
+        src={IMAGES.alephPodium}
+        alt="Рейтинг лицея — первое место"
+        width={494}
+        height={700}
+        className="h-auto w-full object-contain"
+      />
     </div>
   );
 }
