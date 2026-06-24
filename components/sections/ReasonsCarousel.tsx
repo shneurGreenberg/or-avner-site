@@ -5,18 +5,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { reasons } from "@/content/homepage";
 import {
-  DashedDivider,
+  FullWidthDottedRule,
   SectionContainer,
   SectionTitle,
 } from "@/components/ui/Section";
 
 export function ReasonsCarousel() {
   return (
-    <SectionContainer id="reasons">
+    <SectionContainer id="reasons" className="overflow-x-clip bg-white">
       <div className="text-center">
         <SectionTitle>8 причин почему выбирают нас:</SectionTitle>
       </div>
-      <DashedDivider />
+      <FullWidthDottedRule />
 
       <div className="reasons-swiper relative px-8 md:px-14">
         <Swiper
@@ -30,14 +30,16 @@ export function ReasonsCarousel() {
           {reasons.map((reason) => (
             <SwiperSlide key={reason.title}>
               <div className="grid items-center gap-8 overflow-hidden rounded-[32px] bg-brand-lavender p-6 md:grid-cols-2 md:gap-10 md:p-10 lg:p-12">
-                <div className="dashed-frame overflow-hidden rounded-[28px]">
-                  <SiteImage
-                    src={reason.image}
-                    alt={reason.title}
-                    width={1280}
-                    height={851}
-                    className="h-56 w-full object-cover md:h-80"
-                  />
+                <div className="dashed-frame overflow-visible rounded-[28px]">
+                  <div className="image-blue-bg overflow-hidden rounded-[28px]">
+                    <SiteImage
+                      src={reason.image}
+                      alt={reason.title}
+                      width={1280}
+                      height={851}
+                      className="h-56 w-full object-cover md:h-80"
+                    />
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-display text-xl font-extrabold text-brand-navy md:text-2xl">

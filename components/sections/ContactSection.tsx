@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { IMAGES, SITE, MAP } from "@/lib/constants";
+import { SITE, MAP } from "@/lib/constants";
 import { MapPinDoodle } from "@/components/ui/Icons";
 import { Button } from "@/components/ui/Button";
 import { SiteImage } from "@/components/ui/SiteImage";
@@ -52,21 +52,21 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contacts" className="relative overflow-hidden">
-      <div className="absolute inset-0">
+    <section id="contacts" className="relative bg-white">
+      <div className="relative h-[220px] overflow-hidden sm:h-[260px] md:h-[320px] lg:h-[380px]">
         <SiteImage
           src="/images/aerial-campus.webp"
           alt=""
           fill
           aria-hidden
-          className="object-cover"
+          className="object-cover object-center"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-white/20" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent via-white/70 to-white md:h-32" />
       </div>
 
-      <div className="relative px-4 py-16 md:px-8 md:py-20 lg:py-24">
-        <div className="mx-auto max-w-[1200px] overflow-hidden rounded-[32px] bg-brand-lavender-card/95 p-6 shadow-lg backdrop-blur-sm md:p-10 lg:p-12">
+      <div className="relative bg-white px-4 pb-16 pt-0 md:px-8 md:pb-20 lg:pb-24">
+        <div className="relative mx-auto max-w-[1200px] -mt-20 overflow-visible rounded-[32px] bg-brand-lavender-card p-6 shadow-lg md:-mt-28 md:p-10 lg:-mt-32 lg:p-12">
           <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
             <div>
               <SectionTitle>Наши контакты</SectionTitle>
@@ -147,9 +147,9 @@ export function ContactSection() {
               </form>
             </div>
 
-            <div className="relative">
-              <div className="absolute -top-2 right-0 z-10 md:-top-4">
-                <MapPinDoodle />
+            <div className="relative pt-6 lg:pt-10">
+              <div className="pointer-events-none absolute -top-8 left-1/2 z-10 -translate-x-1/2 md:-top-10">
+                <MapPinDoodle className="h-16 w-auto md:h-20 lg:h-24" />
               </div>
               <div className="overflow-hidden rounded-3xl bg-white shadow-sm">
                 <iframe

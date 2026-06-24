@@ -9,7 +9,7 @@ import {
 
 export function AboutSection() {
   return (
-    <SectionContainer id="about">
+    <SectionContainer id="about" className="bg-white pt-10 md:pt-14">
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14">
         <div>
           <SectionTitle>{aboutContent.title}</SectionTitle>
@@ -23,7 +23,7 @@ export function AboutSection() {
         </div>
 
         <div className="dashed-frame mx-auto max-w-lg">
-          <div className="overflow-hidden rounded-3xl">
+          <div className="image-blue-bg overflow-hidden rounded-3xl">
             <SiteImage
               src="/images/building-front.webp"
               alt="Здание лицея «ОР АВНЕР»"

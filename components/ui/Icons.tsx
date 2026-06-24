@@ -1,5 +1,6 @@
 import { SiteImage } from "@/components/ui/SiteImage";
 import { IMAGES } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 export function Logo({ className }: { className?: string }) {
   return (
@@ -46,10 +47,10 @@ export function MapPinDoodle({ className }: { className?: string }) {
     <SiteImage
       src={IMAGES.decorMapPin}
       alt=""
-      width={500}
-      height={177}
+      width={420}
+      height={200}
       aria-hidden
-      className={className ?? "h-14 w-auto md:h-16"}
+      className={className ?? "h-16 w-auto md:h-20"}
     />
   );
 }
@@ -104,17 +105,18 @@ export function AlephIllustration() {
 
 export function GlassesIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={className ?? "h-6 w-6 text-brand-navy"}
+    <span
+      className={cn(
+        "inline-flex h-8 w-8 items-center justify-center rounded-full border border-brand-navy/30 bg-white",
+        className,
+      )}
       aria-hidden="true"
     >
-      <circle cx="7" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-      <circle cx="17" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M11 12h2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M3 12h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M21 12h0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
+      <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 text-brand-navy">
+        <circle cx="7" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="17" cy="12" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M10.5 12h3" stroke="currentColor" strokeWidth="1.5" />
+      </svg>
+    </span>
   );
 }

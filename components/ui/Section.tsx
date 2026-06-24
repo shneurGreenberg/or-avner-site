@@ -45,7 +45,7 @@ export function SectionSubtitle({
   return (
     <p
       className={cn(
-        "mt-2 text-lg font-medium italic text-brand-lavender-text md:text-xl",
+        "mt-2 font-sans text-base font-normal italic text-brand-lavender-text md:text-lg lg:text-xl",
         className,
       )}
     >
@@ -54,12 +54,16 @@ export function SectionSubtitle({
   );
 }
 
-export function DashedDivider() {
+export function FullWidthDottedRule() {
   return (
-    <div className="title-divider my-8 md:my-10">
-      {Array.from({ length: 16 }).map((_, i) => (
+    <div className="section-dotted-rule my-8 md:my-10" aria-hidden="true">
+      {Array.from({ length: 48 }).map((_, i) => (
         <span key={i} />
       ))}
     </div>
   );
+}
+
+export function DashedDivider() {
+  return <FullWidthDottedRule />;
 }

@@ -17,6 +17,7 @@ PHOTO_MAX = 1600
 HERO_MAX = 1920
 GRAPHIC_MAX = 1200
 WEBP_QUALITY = 82
+BRIGHT_BLUE = (238, 242, 255, 255)
 
 
 def remove_black_bg(img: Image.Image, threshold: int = 40) -> Image.Image:
@@ -44,6 +45,13 @@ def trim_transparent(img: Image.Image, padding: int = 8) -> Image.Image:
     return rgba.crop((left, top, right, bottom))
 
 
+def composite_on_blue(img: Image.Image, padding: int = 12) -> Image.Image:
+    cutout = trim_transparent(remove_black_bg(img), padding=padding)
+    bg = Image.new("RGBA", cutout.size, BRIGHT_BLUE)
+    bg.paste(cutout, (0, 0), cutout)
+    return bg
+
+
 def save_webp(
     img: Image.Image,
     dest: Path,
@@ -54,8 +62,8 @@ def save_webp(
     image = img.copy()
     if cut_black:
         image = remove_black_bg(image)
-    if image.mode != "RGBA":
-        image = image.convert("RGBA" if dest.stem.startswith(("logo", "hero-boy", "decor", "letter", "aleph")) else "RGB")
+    if image.mode not in ("RGBA", "RGB"):
+        image = image.convert("RGBA")
     if max_size and max(image.size) > max_size:
         image.thumbnail((max_size, max_size), Image.Resampling.LANCZOS)
     dest.parent.mkdir(parents=True, exist_ok=True)
@@ -72,14 +80,25 @@ def save_photo(src: Path, dest_name: str, *, max_size: int = PHOTO_MAX, cut_blac
     save_webp(img, OUT / f"{dest_name}.webp", max_size=max_size, cut_black=cut_black)
 
 
-def save_graphic(emf_name: str, dest_name: str, *, max_size: int = GRAPHIC_MAX, trim: bool = True) -> None:
+def save_graphic(
+    emf_name: str,
+    dest_name: str,
+    *,
+    max_size: int = GRAPHIC_MAX,
+    trim: bool = True,
+    blue_bg: bool = False,
+) -> None:
     src = GRAPHICS / f"{emf_name}.png"
     if not src.exists():
         print("missing graphic", src)
         return
-    img = remove_black_bg(Image.open(src))
-    if trim:
-        img = trim_transparent(img)
+    img = Image.open(src)
+    if blue_bg:
+        img = composite_on_blue(img)
+    else:
+        img = remove_black_bg(img)
+        if trim:
+            img = trim_transparent(img)
     save_webp(img, OUT / f"{dest_name}.webp", max_size=max_size)
 
 
@@ -96,13 +115,13 @@ def main() -> None:
     save_photo(SRC / "תמונה3.png", "hero-boy", max_size=900, cut_black=True)
     save_photo(SRC / "ללא רקע עם לבן.png", "logo", max_size=600)
 
-    save_graphic("תמונה11", "aleph-podium", max_size=700)
-    save_graphic("תמונה12", "letter-a", max_size=220)
-    save_graphic("תמונה13", "letter-l", max_size=220)
-    save_graphic("תמונה14", "letter-e", max_size=220)
-    save_graphic("תמונה15", "letter-f", max_size=220)
+    save_graphic("תמונה11", "aleph-podium", max_size=700, blue_bg=True)
+    save_graphic("תמונה12", "letter-a", max_size=220, blue_bg=True)
+    save_graphic("תמונה13", "letter-l", max_size=220, blue_bg=True)
+    save_graphic("תמונה14", "letter-e", max_size=220, blue_bg=True)
+    save_graphic("תמונה15", "letter-f", max_size=220, blue_bg=True)
     save_graphic("תמונה16", "decor-faq", max_size=900)
-    save_graphic("תמונה22", "decor-map-pin", max_size=500)
+    save_graphic("תמונה20", "decor-map-pin", max_size=420)
 
     extracted_map = {
         "pdf-26-1080x530.jpeg": "building-front",

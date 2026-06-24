@@ -8,7 +8,7 @@ import {
 
 export function ParentFeatures() {
   return (
-    <SectionContainer id="gallery">
+    <SectionContainer id="gallery" className="bg-white">
       <div className="text-center">
         <SectionTitle>{parentFeatures.title}</SectionTitle>
         <SectionSubtitle>{parentFeatures.subtitle}</SectionSubtitle>
@@ -24,13 +24,15 @@ export function ParentFeatures() {
             className="grid items-center gap-8 md:grid-cols-2 md:gap-12"
           >
             <div className="dashed-frame overflow-hidden rounded-3xl">
-              <SiteImage
-                src={item.image}
-                alt={item.title}
-                width={1280}
-                height={851}
-                className="h-56 w-full object-cover md:h-72"
-              />
+              <div className="image-blue-bg overflow-hidden rounded-3xl">
+                <SiteImage
+                  src={item.image}
+                  alt={item.title}
+                  width={1280}
+                  height={851}
+                  className="h-56 w-full object-cover md:h-72"
+                />
+              </div>
             </div>
             <div>
               <h3 className="font-display text-xl font-extrabold text-brand-navy md:text-2xl">

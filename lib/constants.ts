@@ -1,7 +1,8 @@
 export const SITE = {
   name: "«ОР АВНЕР»",
   subtitle: "Новосибирский еврейский лицей",
-  tagline: "МИР ИНТЕЛЛЕКТА И ДОБРА",
+  taglineLine1: "МИР ИНТЕЛЛЕКТА",
+  taglineLine2: "И ДОБРА",
   phone: "(383)209-12-08",
   phoneHref: "tel:+73832091208",
   email: "anver@edu54.ru",
